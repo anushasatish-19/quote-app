@@ -1,6 +1,6 @@
-# 🚀 CI/CD Pipeline for Spring Boot Application using Jenkins, Docker & AWS ECS
+#  CI/CD Pipeline for Spring Boot Application using Jenkins, Docker & AWS ECS
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates an end-to-end **CI/CD pipeline** for a Spring Boot application.
 The pipeline automates build, test, containerization, and deployment to AWS.
@@ -9,7 +9,7 @@ A simple Quote Generator REST API is used as the application to focus on DevOps 
 
 ---
 
-## 🧱 Architecture Flow
+##  Architecture Flow
 
 ```
 Developer → GitHub Push → Jenkins (Webhook Trigger)
@@ -23,7 +23,7 @@ Developer → GitHub Push → Jenkins (Webhook Trigger)
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Backend:** Java, Spring Boot
 * **Build Tool:** Maven
@@ -36,18 +36,18 @@ Developer → GitHub Push → Jenkins (Webhook Trigger)
 
 ---
 
-## ⚙️ Application Details
+##  Application Details
 
 This is a simple REST API that manages quotes.
 
-### 🔹 Endpoints
+###  Endpoints
 
 * `GET /quotes` → Fetch all quotes
 * `POST /quotes` → Add a new quote
 
 ---
 
-## 🐳 Dockerization
+##  Dockerization
 
 The application is containerized using Docker.
 
@@ -65,7 +65,7 @@ docker run -p 8080:8080 quote-app
 
 ---
 
-## 🔄 CI/CD Pipeline (Jenkins)
+##  CI/CD Pipeline (Jenkins)
 
 The pipeline automates:
 
@@ -78,7 +78,7 @@ The pipeline automates:
 
 ---
 
-## ☁️ AWS Deployment
+##  AWS Deployment
 
 * Docker images are stored in **Amazon ECR**
 * Application is deployed using **Amazon ECS**
@@ -86,7 +86,7 @@ The pipeline automates:
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 *(Add screenshots here for better visibility)*
 
@@ -97,7 +97,7 @@ The pipeline automates:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 quote-app/
@@ -110,7 +110,7 @@ quote-app/
 
 ---
 
-## ▶️ How to Run Locally
+##  How to Run Locally
 
 ### 1. Build the project
 
@@ -132,7 +132,7 @@ http://localhost:8080/quotes
 
 ---
 
-## 💡 Key Learnings
+##  Key Learnings
 
 * Implemented end-to-end CI/CD pipeline
 * Integrated Docker with Jenkins
@@ -141,14 +141,14 @@ http://localhost:8080/quotes
 
 ---
 
-## 📎 Note
+##  Note
 
 This project focuses on **DevOps pipeline implementation**.
 The application is intentionally kept simple to highlight automation, containerization, and cloud deployment.
 
 ---
 
-## 🔗 Author
+##  Author
 
 GitHub: https://github.com/anushasatish-19
 
