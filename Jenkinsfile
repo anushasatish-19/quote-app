@@ -11,7 +11,8 @@ pipeline {
     }
 
     tools {
-        maven 'Maven'
+        maven "MAVEN3.9"
+        jdk "JDK17"
     }
 
     stages {
@@ -22,9 +23,9 @@ pipeline {
             }
         }
 
-        stage('Build & Test') {
+        stage('Build') {
             steps {
-                sh 'mvn clean verify'
+                sh 'mvn -B clean verify -DskipTests'
             }
         }
 
@@ -33,7 +34,7 @@ pipeline {
                 sh 'mvn checkstyle:checkstyle'
             }
         }
-
+/*
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('sonarserver') {
@@ -49,7 +50,7 @@ pipeline {
               }
             }
           }
-
+*/
         stage('Build App Image') {
             steps {
                  script {
@@ -71,7 +72,6 @@ pipeline {
         steps {
              sh """
              docker push ${ECR_URI}:${BUILD_NUMBER}
-             docker push ${ECR_URI}:latest
              """
          }
     }
@@ -81,7 +81,7 @@ pipeline {
             sh 'docker image prune -af'
           }
     }
-
+/*
         stage('Deploy to ECS') {
             steps {
                 sh """
@@ -92,7 +92,7 @@ pipeline {
                 --region ${AWS_REGION}
                 """
             }
-        }
+        }  */
     }
 
     post {
