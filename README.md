@@ -89,11 +89,14 @@ The pipeline automates:
 
 ##  Screenshots
 
-<img width="959" height="317" alt="cicd-pipeline-jenkins" src="https://github.com/user-attachments/assets/005d740f-ab9d-4767-8dca-07233098864c" />
+<img width="400" alt="cicd-pipeline-jenkins" src="https://github.com/user-attachments/assets/005d740f-ab9d-4767-8dca-07233098864c" />
 
-<img width="959" height="392" alt="Sonar-server" src="https://github.com/user-attachments/assets/8b8aceb0-8b00-4e86-b206-cb10a084eb91" />
 
-<img width="883" height="418" alt="application" src="https://github.com/user-attachments/assets/e2274bda-25c2-4d9a-a00f-86e375fbdf29" />
+<img width="400" alt="Sonar-server" src="https://github.com/user-attachments/assets/8b8aceb0-8b00-4e86-b206-cb10a084eb91" />
+
+
+<img width="400" alt="application" src="https://github.com/user-attachments/assets/e2274bda-25c2-4d9a-a00f-86e375fbdf29" />
+
 
 
 * Jenkins pipeline execution
