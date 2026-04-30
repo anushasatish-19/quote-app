@@ -97,6 +97,7 @@ The pipeline automates:
  <br>
  ### 3. Application output in browser
  <img width="400" alt="application" src="https://github.com/user-attachments/assets/e2274bda-25c2-4d9a-a00f-86e375fbdf29" />
+ <br>
 </p?
 
 * Docker build logs
