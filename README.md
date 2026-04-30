@@ -88,22 +88,19 @@ The pipeline automates:
 ---
 
 ##  Screenshots
+<p align="center">
+ ### 1. Jenkins pipeline execution
+ <img alt="cicd-pipeline-jenkins" src="https://github.com/user-attachments/assets/005d740f-ab9d-4767-8dca-07233098864c"        width="800" />
+ <br>
+ ### 2. Sonar Dashboard
+ <img width="800" alt="Sonar-server" src="https://github.com/user-attachments/assets/8b8aceb0-8b00-4e86-b206-cb10a084eb91" />
+ <br>
+ ### 3. Application output in browser
+ <img width="400" alt="application" src="https://github.com/user-attachments/assets/e2274bda-25c2-4d9a-a00f-86e375fbdf29" />
+</p?
 
-<img width="400" alt="cicd-pipeline-jenkins" src="https://github.com/user-attachments/assets/005d740f-ab9d-4767-8dca-07233098864c" />
-
-
-<img width="400" alt="Sonar-server" src="https://github.com/user-attachments/assets/8b8aceb0-8b00-4e86-b206-cb10a084eb91" />
-
-
-<img width="400" alt="application" src="https://github.com/user-attachments/assets/e2274bda-25c2-4d9a-a00f-86e375fbdf29" />
-
-
-
-* Jenkins pipeline execution
-* Sonar Dashboard
 * Docker build logs
 * ECS service running
-* Application output in browser
 
 ---
 
