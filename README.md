@@ -96,7 +96,7 @@ The pipeline automates:
  <img width="800" alt="Sonar-server" src="https://github.com/user-attachments/assets/8b8aceb0-8b00-4e86-b206-cb10a084eb91" />
  <br>
  ### 3. Application output in browser
- <img width="400" alt="application" src="https://github.com/user-attachments/assets/e2274bda-25c2-4d9a-a00f-86e375fbdf29" />
+ <img width="800" alt="application" src="https://github.com/user-attachments/assets/e2274bda-25c2-4d9a-a00f-86e375fbdf29" />
  <br>
 </p?
 
