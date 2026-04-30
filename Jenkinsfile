@@ -8,6 +8,8 @@ pipeline {
         IMAGE_TAG = "${BUILD_NUMBER}"
         ACCOUNT_ID = '355877360751'
         ECR_URI = "${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}"
+        appregistry = "https://${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+
     }
 
     tools {
@@ -34,7 +36,7 @@ pipeline {
                 sh 'mvn checkstyle:checkstyle'
             }
         }
-/*
+
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('sonarserver') {
@@ -50,7 +52,7 @@ pipeline {
               }
             }
           }
-*/
+
         stage('Build App Image') {
             steps {
                  script {
@@ -59,40 +61,35 @@ pipeline {
             }
     }
 
-        stage('Login to ECR') {
-            steps {
-                 sh """
-                 aws ecr get-login-password --region ${AWS_REGION} | \
-                 docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
-                 """
+     stage('Upload App Image') {
+          steps{
+            script {
+              docker.withRegistry( appregistry, registryCredential ) {
+                dockerImage.push("$BUILD_NUMBER")
+                dockerImage.push('latest')
+              }
             }
-    }
+          }
+        }
 
-    stage('Push App Image to ECR') {
-        steps {
-             sh """
-             docker push ${ECR_URI}:${BUILD_NUMBER}
-             """
-         }
-    }
 
      stage('Remove container images'){
           steps{
             sh 'docker image prune -af'
           }
     }
-/*
-        stage('Deploy to ECS') {
+
+       stage('Deploy to ECS') {
             steps {
                 sh """
                 aws ecs update-service \
-                --cluster quote-app-cluster \
-                --service quote-app-service \
+                --cluster quoteapp \
+                --service quoteappservice \
                 --force-new-deployment \
                 --region ${AWS_REGION}
                 """
             }
-        }  */
+        }  
     }
 
     post {
@@ -104,3 +101,4 @@ pipeline {
         }
     }
 }
+
