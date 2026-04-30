@@ -14,7 +14,7 @@ A simple Quote Generator REST API is used as the application to focus on DevOps 
 ```
 Developer → GitHub Push → Jenkins (Webhook Trigger)
 → Maven Build & Test
-→ SonarQube analysis and upload results to sonar dashboard
+→ SonarQube analysis with enforced Quality Gates
 → Docker Image Build
 → Push to Amazon ECR
 → Deploy to Amazon ECS
@@ -72,6 +72,7 @@ The pipeline automates:
 * Source code checkout from GitHub
 * Build using Maven
 * Run tests
+* Enforced Quality Gates to block deployment on code issues
 * Build Docker image
 * Push image to Amazon ECR
 * Deploy latest image to Amazon ECS
@@ -88,9 +89,15 @@ The pipeline automates:
 
 ##  Screenshots
 
-*(Add screenshots here for better visibility)*
+<img width="959" height="317" alt="cicd-pipeline-jenkins" src="https://github.com/user-attachments/assets/005d740f-ab9d-4767-8dca-07233098864c" />
+
+<img width="959" height="392" alt="Sonar-server" src="https://github.com/user-attachments/assets/8b8aceb0-8b00-4e86-b206-cb10a084eb91" />
+
+<img width="883" height="418" alt="application" src="https://github.com/user-attachments/assets/e2274bda-25c2-4d9a-a00f-86e375fbdf29" />
+
 
 * Jenkins pipeline execution
+* Sonar Dashboard
 * Docker build logs
 * ECS service running
 * Application output in browser
